@@ -1,0 +1,9 @@
+<h1>Pages#top</h1>
+
+<% if session[:id]%>
+  <div> <%= @users.find(session[:id]).username %> <%= link_to"マイページ","/mypage" %> <%= link_to"ログアウト","/logout" %></div>
+<%else%>
+  <div><%= link_to"ログイン画面","/login" %></div>
+  <div><%= link_to"ユーザー登録","/register" %></div>
+<%end%>
+

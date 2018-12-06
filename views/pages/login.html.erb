@@ -1,0 +1,16 @@
+<h1>Pages#login</h1>
+
+<% if flash[:error_message] %>
+    <div><%= flash[:error_message] %> </div>
+<% end %>    
+
+<%= form_tag("/login", method: :post) do %>
+    <%= label_tag "ユーザーネーム" %> <br>
+    <%= text_field_tag :username %> <br>
+    <%= label_tag "パスワード" %> <br>
+    <%= password_field_tag :password %> <br>
+    <%= submit_tag "送信" %>
+<%end%>
+
+<br><br>
+<div><%= link_to"トップページ","/" %> </div>
