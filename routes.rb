@@ -20,4 +20,6 @@ Rails.application.routes.draw do
   get '/mypage/profile', to: "pages#profile"
 
   post '/mypage/profile', to: "pages#changeprofile"
+
+  post '/submit', to: "pages#submit
 end

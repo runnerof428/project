@@ -1,2 +1,8 @@
 <h1>Pages#submit</h1>
-<p>Find me in app/views/pages/submit.html.erb</p>
+<%=form_tag("/submit",method: :post) do %>
+    <%= label_tag :タイトル %><br>
+    <%= text_field_tag :text%><br>
+    <%= label_tag :投稿内容 %><br>
+    <%= password_field_tag :text %><br>
+    <%= submit_tag :確認 %>
+<% end %>

@@ -93,3 +93,12 @@ class PagesController < ApplicationController
     redirect_to "/"
   end
 end
+
+def submit
+    title = params[:title]
+    content = params[:content]
+    s = submission.new
+    s.title = title
+    s.content = content
+    s.save
+end
