@@ -1,0 +1,9 @@
+<h1>投稿一覧</h1>
+<% @user.submissions.each do |s| %>
+    <%= link_to "ID:"+s.id.to_s+" "+s.title,"/mypage/submissionlist/"+s.id.to_s %> 
+    <%if s.evaluation %>
+        <%= " "+s.evaluation.to_s+"👍" %>
+    <% end %>
+    <br>
+<% end %>
+<%= link_to"トップページ", "/" %>

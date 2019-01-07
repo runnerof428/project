@@ -1,0 +1,7 @@
+<%= form_tag("/genre", method: :post) do %>
+    <%= label_tag :科目名 %><br>
+    <%= text_field_tag :kamoku %><br>
+    <%= label_tag :ジャンル名 %><br>
+    <%= text_field_tag :genre %><br>
+    <%= submit_tag :送信 %>
+<% end %>

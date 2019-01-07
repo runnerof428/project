@@ -1,0 +1,22 @@
+<h1>Pages#submit</h1>
+
+<%=form_tag("/submit",method: :post) do %>
+
+    <%= label_tag :分野を選択してください %> <br>
+
+    <%= grouped_collection_select(:genre,:subject_id,@subjects,:genres,:subject,:id,:genre,:include_blank => true) %> <br>
+
+    <%= label_tag :タイトル %><br>
+
+    <%= text_field_tag :title,"", :size => "30" %><br>
+
+    <%= label_tag :投稿内容 %><br>
+
+    <%= text_area_tag :content,"", :size => "40*60" %><br>
+
+    <%= submit_tag :確認,data: {confirm: "投稿しますか？"} %>
+    
+    <br><br>
+    <%= link_to"トップページ","/"%>
+
+<% end %>

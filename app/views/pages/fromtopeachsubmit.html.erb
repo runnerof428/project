@@ -1,0 +1,11 @@
+<%= @s.title %> <br> <br>
+<%= @s.content %> <br> <br>
+
+<% if session[:id] %>
+  <%= button_to @s.evaluation.to_s+"👍",evaluate_path(@s.id), method: :get %> <br>
+<%else%>
+  <%= @s.evaluation.to_s+"👍" %>  <br>
+<%end%> 
+
+<%= link_to"投稿一覧へ戻る","/submissionlist/"+@i.to_s %> <br>
+<%= link_to"トップページ","/" %>

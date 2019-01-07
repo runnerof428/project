@@ -1,0 +1,20 @@
+<h1>Pages#top</h1>
+
+<% if session[:id]%>
+  <div> <%= @users.find(session[:id]).username %> 
+  <%= link_to"マイページ","/mypage" %> 
+  <%= link_to"ログアウト","/logout" %></div>
+  <%= link_to"投稿する","/submit"%>
+<%else%>
+  <div><%= link_to"ログイン画面","/login" %></div>
+  <div><%= link_to"ユーザー登録","/register" %></div>
+<%end%>
+<br>
+<br>
+<h2>科目一覧</h2>
+<% @subjects.each do |s| %>
+  <h3><%= s.subject %></h3>
+  <% s.genres.each do |g| %>
+    <%= link_to g.genre,"/submissionlist/"+g.id.to_s %> <br>
+  <% end %>
+<% end %>

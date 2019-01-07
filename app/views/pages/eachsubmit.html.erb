@@ -1,0 +1,6 @@
+<%= @submit.title %> <br> <br>
+<%= @submit.content %> <br>
+
+<%= link_to"編集",submitedit_path(@submit) %>
+<%= link_to"削除",submitdelete_path(@submit.id), data:{confirm:"本当に削除しますか？"} %><br>
+<%= link_to"投稿一覧へ戻る","/mypage/submissionlist" %>

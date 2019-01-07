@@ -1,0 +1,10 @@
+<h1> 投稿一覧 </h1>
+<% @g.submissions.each do |g| %>
+  <%= link_to g.title,"/submissionlist/"+@g.id.to_s+"/"+g.id.to_s %>
+  <% if g.evaluation !=0 %>
+    <%= g.evaluation.to_s+"👍" %>
+  <% end %>
+  <br>
+<% end %>
+<br><br>
+<%= link_to"トップページ","/"%>

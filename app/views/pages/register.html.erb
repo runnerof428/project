@@ -1,0 +1,15 @@
+<h1>Pages#register</h1>
+
+<% if flash[:error_message] %>
+  <div><%= flash[:error_message] %></div>    
+<%end%>
+
+<%= form_tag("/register", method: :post) do %>
+    <%= label_tag :ユーザー名 %><br>
+    <%= text_field_tag :username %><br>
+    <%= label_tag :パスワード %><br>
+    <%= password_field_tag :password %><br>
+    <%= submit_tag :送信 %>
+<% end %>
+<br><br>
+<div><%= link_to"トップページ","/" %> </div>

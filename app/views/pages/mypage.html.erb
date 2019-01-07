@@ -1,0 +1,4 @@
+<h1><%= @users.find(session[:id]).username + "のマイページ" %></h1>
+<%= link_to"プロフィール編集","/mypage/profile" %> <br>
+<%= link_to"投稿一覧","/mypage/submissionlist" %> <br><br>
+<%= link_to"トップページ","/" %>

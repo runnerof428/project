@@ -1,0 +1,15 @@
+<% if flash[:error_message]%>
+  <div><%= flash[:error_message]%></div>
+<%end%>
+
+<%= form_tag("/mypage/profile", method: :post) do %>
+    <%= label_tag "ユーザー名"%><br>
+    <%= text_field_tag :username, @users.find(session[:id]).username %> <br>
+    <%= label_tag "パスワード" %> <br>
+    <%= text_field_tag :password, @users.find(session[:id]).password %> <br>
+    <%= submit_tag "変更" %>
+<%end%>
+
+<br><br>
+<%= link_to"トップページ","/" %>
+
